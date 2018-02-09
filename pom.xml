@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <parent>
         <groupId>com.izettle</groupId>
@@ -11,7 +10,7 @@
 	<groupId>de.flapdoodle.embed</groupId>
 	<artifactId>de.flapdoodle.embed.process</artifactId>
 	<name>Flapdoodle Embedded Process Util</name>
-	<version>3.0.0-SNAPSHOT</version>
+	<version>2.0.1-fork</version>
 	<packaging>bundle</packaging>
 
 	<description>A embedded process starter ...</description>
@@ -30,7 +29,8 @@
 		<connection>scm:git:git@github.com:iZettle/de.flapdoodle.embed.process.git</connection>
 		<developerConnection>scm:git:git@github.com:iZettle/de.flapdoodle.embed.process.git</developerConnection>
 		<url>git@github.com:iZettle/de.flapdoodle.embed.process.git</url>
-	</scm>
+	  <tag>de.flapdoodle.embed.process-2.0.1-fork</tag>
+  </scm>
 
 	<!-- https://docs.sonatype.org/display/Repository/Central+Sync+Requirements 
 		https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide 
