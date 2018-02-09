@@ -2,12 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>7</version>
-	</parent>
-
+    <parent>
+        <groupId>com.izettle</groupId>
+        <artifactId>izettle</artifactId>
+        <version>1.9</version>
+    </parent>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.flapdoodle.embed</groupId>
 	<artifactId>de.flapdoodle.embed.process</artifactId>
@@ -16,7 +15,7 @@
 	<packaging>bundle</packaging>
 
 	<description>A embedded process starter ...</description>
-	<url>http://github.com/flapdoodle-oss/de.flapdoodle.embed.process</url>
+	<url>http://github.com/iZettle/de.flapdoodle.embed.process</url>
 
 	<licenses>
 		<license>
@@ -28,9 +27,9 @@
 
 
 	<scm>
-		<connection>scm:git:git@github.com:flapdoodle-oss/de.flapdoodle.embed.process.git</connection>
-		<developerConnection>scm:git:git@github.com:flapdoodle-oss/de.flapdoodle.embed.process.git</developerConnection>
-		<url>git@github.com:flapdoodle-oss/de.flapdoodle.embed.process.git</url>
+		<connection>scm:git:git@github.com:iZettle/de.flapdoodle.embed.process.git</connection>
+		<developerConnection>scm:git:git@github.com:iZettle/de.flapdoodle.embed.process.git</developerConnection>
+		<url>git@github.com:iZettle/de.flapdoodle.embed.process.git</url>
 	</scm>
 
 	<!-- https://docs.sonatype.org/display/Repository/Central+Sync+Requirements 
@@ -116,7 +115,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.19.1</version>
+				<version>2.20.1</version>
 				<configuration>
 					<excludes>
 						<exclude>**/live/**</exclude>
@@ -256,6 +255,40 @@
 						</goals>
 						<configuration>
 							<additionalparam>-Xdoclint:none</additionalparam>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>${maven-checkstyle-plugin.version}</version>
+				<dependencies>
+					<dependency>
+						<groupId>com.izettle</groupId>
+						<artifactId>izettle-checkstyle</artifactId>
+						<version>${izettle-checkstyle.version}</version>
+					</dependency>
+					<dependency>
+						<groupId>com.puppycrawl.tools</groupId>
+						<artifactId>checkstyle</artifactId>
+						<version>${checkstyle.version}</version>
+					</dependency>
+				</dependencies>
+				<executions>
+					<execution>
+						<id>validate</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>checkstyle</goal>
+						</goals>
+						<configuration>
+							<includeTestSourceDirectory>false</includeTestSourceDirectory>
+							<failsOnError>false</failsOnError>
+							<consoleOutput>true</consoleOutput>
+							<configLocation>checkstyle/checkstyle.xml</configLocation>
+							<headerLocation>checkstyle/LICENSE.txt</headerLocation>
+							<linkXRef>false</linkXRef>
 						</configuration>
 					</execution>
 				</executions>
