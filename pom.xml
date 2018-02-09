@@ -10,7 +10,7 @@
 	<groupId>de.flapdoodle.embed</groupId>
 	<artifactId>de.flapdoodle.embed.process</artifactId>
 	<name>Flapdoodle Embedded Process Util</name>
-	<version>2.0.1-fork</version>
+	<version>3.0.0-SNAPSHOT</version>
 	<packaging>bundle</packaging>
 
 	<description>A embedded process starter ...</description>
@@ -29,7 +29,7 @@
 		<connection>scm:git:git@github.com:iZettle/de.flapdoodle.embed.process.git</connection>
 		<developerConnection>scm:git:git@github.com:iZettle/de.flapdoodle.embed.process.git</developerConnection>
 		<url>git@github.com:iZettle/de.flapdoodle.embed.process.git</url>
-	  <tag>de.flapdoodle.embed.process-2.0.1-fork</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<!-- https://docs.sonatype.org/display/Repository/Central+Sync+Requirements 
