@@ -327,7 +327,7 @@
 	</profiles>
 
 	<properties>
-		<jna.version>4.2.2</jna.version>
+		<jna.version>4.5.2</jna.version>
 		<osgi.category>Bundles</osgi.category>
 		<osgi.export>
 			de.flapdoodle.embed.process;version=${project.version},
